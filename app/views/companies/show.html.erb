@@ -5,5 +5,5 @@ All Offices by location for <strong><%= @company.name %></strong>
 <% end %> -->
 
 <% @company.offices.each do |office| %>
-  <ul><%= office.name %>-<%= @company.count(@company, office.name) </ul>
+  <ul><%= office.name %>-<%= @company.locations(@company, office.name)%></ul>
 <% end %>
