@@ -1,5 +1,9 @@
-All Jobs for <strong><%= @company.name %></strong>
+All Offices by location for <strong><%= @company.name %></strong>
 
-<% @company.jobs.each do |job| %>
+<!-- <% @company.jobs.each do |job| %>
   <ul><%= job.title %></ul>
+<% end %> -->
+
+<% @company.offices.each do |office| %>
+  <ul><%= office.name %>-<%= @company.count(@company, office.name) </ul>
 <% end %>
