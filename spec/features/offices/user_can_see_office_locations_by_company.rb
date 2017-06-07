@@ -16,14 +16,16 @@ describe "User sees office locations for a single company" do
     company.office_locations.create!(office_id: office.id)
     company.office_locations.create!(office_id: office_1.id)
     company.office_locations.create!(office_id: office_2.id)
+    company.office_locations.create!(office_id: office_3.id)
+    company.office_locations.create!(office_id: office_4.id)
 
-    visit company_path(path)
+    visit company_path(company)
 
     expect(page).to have_content(office.name)
     expect(page).to have_content(office_1.name)
     expect(page).to have_content(office_2.name)
-    expect(page).to have_content(office_2.name)
-    expect(page).to have_content(office_2.name)
+    expect(page).to have_content(office_3.name)
+    expect(page).to have_content(office_4.name)
 
   end
 end

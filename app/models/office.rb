@@ -1,4 +1,4 @@
-class Office < ActiveRecord::Base
+class Office < ApplicationRecord
   validates :name, presence: true
   validates :neighborhood, presence: true, uniqueness: true
   has_many :office_locations
