@@ -46,7 +46,7 @@ ActiveRecord::Schema.define(version: 20170607142643) do
     t.index ["company_id"], name: "index_jobs_on_company_id", using: :btree
   end
 
-  create_table "office_locations", force: :cascade do |t|
+  create_table "office_location", force: :cascade do |t|
     t.integer  "office_id"
     t.integer  "company_id"
     t.datetime "created_at", null: false
